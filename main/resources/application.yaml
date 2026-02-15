@@ -6,7 +6,7 @@ spring:
   datasource:
     username: user
     password: psw
-    url: jdbc:postgresql://localhost:5433/tasksoft_db
+    url: jdbc:postgresql://localhost:5444/tasksoft_db
   jpa:
     hibernate:
       ddl-auto: validate
