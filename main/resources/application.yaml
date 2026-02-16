@@ -13,3 +13,19 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  cloud:
+    stream:
+      function:
+        definition: saveNotification
+      bindings:
+        saveNotification-in-0:
+          destination: task-events-exchange
+          group: notification-service-group
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+    connection-timeout: 5s
