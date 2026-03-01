@@ -23,6 +23,12 @@ spring:
           destination: task-events-exchange
           group: notification-service-group
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080
+
   rabbitmq:
     host: localhost
     port: 5672
